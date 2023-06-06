@@ -19,6 +19,7 @@ body{
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    transition: 300ms ease;
 }
 
 #root{
@@ -33,6 +34,10 @@ header{
     width: 100%;
     height: 60px;
     padding: 5px 40px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -70,7 +75,6 @@ nav span{
     width: 100%;
     height: 4px;
     margin: 10px 0;
-    background-color: #222;
 }
 
 section{
@@ -82,30 +86,34 @@ section{
     height: 60vh;
     max-height: 800px;
     min-height: 300px;
-    border-bottom: 5px solid #222;
+    margin: 60px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url(https://wallpaperaccess.com/full/1413646.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 2;
     text-align: center;
+    color: #fff;
 }
 
 h2{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: lighter;
     text-align: center;
+    color: #fff;
 }
 
 h3{
     font-size: 1.5rem;
 }
-
-/**/
 
 .container_blog{
     display: flex;
@@ -134,8 +142,6 @@ h3{
     object-position: top;
 }
 
-/**/
-
 .container_about{
     display: flex;
     flex-direction: column;
@@ -155,8 +161,6 @@ h3{
     object-fit: cover;
     object-position: center;
 }
-
-/**/
 
 .container_contact{
     display: flex;
@@ -186,7 +190,6 @@ h3{
 }
 
 .input_contact{
-    border: 2px solid gray;
     padding: 10px 20px;
     font-size: 1.3rem;
 }
@@ -198,26 +201,10 @@ h3{
 
 footer{
     width: 100%;
-    border-top: 5px solid #222;
-    padding: 20px 40px 40px 20px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.icons_footer{
-    width: 100%;
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.icon_footer{
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    border-radius: 50px;
-    background-color: gray;
 }
 
 footer strong{
@@ -243,7 +230,17 @@ footer p{
         justify-content: space-evenly;
         position: fixed;
         top: 60px;
-        right: -100%;
+        right: -200%;
+    }
+
+    body.light-theme
+    nav{
+        background-color: #c1c1c1;
+    }
+
+    body.dark-theme
+    nav{
+        background-color: #1e1e1e;
     }
     
     h1{
@@ -275,4 +272,84 @@ footer p{
     }
 
 
+}
+
+body.light-theme header,
+body.dark-theme #menu .line{
+    background-color: #fff;
+}
+
+body.light-theme #menu .line{
+    background-color: #222;
+}
+
+body.dark-theme header,
+body.dark-theme footer{
+    background-color: #1c1c1c;
+}
+
+body.light-theme header{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+body.dark-theme h3,
+body.dark-theme span,
+body.dark-theme strong,
+body.dark-theme p,
+body.dark-theme label,
+body.dark-theme button{
+    color: #fff;
+}
+
+body.light-theme button{
+    background-color: #ffee00;
+}
+
+body.dark-theme button{
+    background-color: #08d066;
+}
+
+body.light-theme .container_home{
+    border-bottom: 5px solid #ffd000;
+}
+
+body.light-theme footer{
+    border-top: 5px solid #ffd000;
+}
+
+body.dark-theme .container_home{
+    border-bottom: 5px solid #08d066;
+}
+
+body.dark-theme footer{
+    border-top: 5px solid #08d066;
+}
+
+body.dark-theme .container_home,
+body.dark-theme .container_about{
+    background-color: #161616;
+}
+
+body.dark-theme .container_blog,
+body.dark-theme .container_contact{
+    background-color: #212121;
+}
+
+body.light-theme .container_home,
+body.light-theme .container_about{
+    background-color: #fff;
+}
+
+body.light-theme header,
+body.light-theme .container_blog,
+body.light-theme .container_contact{
+    background-color: #e7e7e7;
+}
+
+body.light-theme .input_contact{
+    border: 2px solid #222;
+}
+
+body.dark-theme .input_contact{
+    border: 2px solid #fff;
 }
