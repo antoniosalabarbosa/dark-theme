@@ -107,3 +107,98 @@ h3{
     object-fit: cover;
     object-position: top;
 }
+
+/**/
+
+.container_about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_about p{
+    max-width: 900px;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.container_about img{
+    width: 70vw;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/**/
+
+.container_contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_contact form{
+    width: 60vw;
+    max-width: 800px;
+    min-width: 200px;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.area_contact{
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.label_contact{
+    margin: 0 0 5px 0;
+}
+
+.input_contact{
+    border: 2px solid gray;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+}
+
+.container_contact form button{
+    padding: 10px 20px;
+    font-size: 1.3rem;
+}
+
+footer{
+    width: 100%;
+    border-top: 5px solid #222;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons_footer{
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.icon_footer{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 50px;
+    background-color: gray;
+}
+
+footer strong{
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+footer p{
+    font-size: 1.2rem;
+}
