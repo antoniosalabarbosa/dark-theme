@@ -34,3 +34,5 @@ changeTheme.addEventListener("click", ()=>{
 });
 
 form.addEventListener("submit", event => event.preventDefault() );
+
+themeSetted();
